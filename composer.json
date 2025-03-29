@@ -1,0 +1,22 @@
+{
+    "name": "wilbis/authcli-jwt",
+    "description": "Client for API JWT authorization.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wilbis\\AuthCliJwt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wilbispaulo",
+            "email": "wilbispaulo@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "web-token/jwt-framework": "^4.0",
+        "psr/clock": "^1.0"
+    }
+}
