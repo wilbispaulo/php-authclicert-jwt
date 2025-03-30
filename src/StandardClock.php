@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace src\library;
+namespace Wilbis\AuthCliJWT;
 
 use DateTimeImmutable;
 use Psr\Clock\ClockInterface;
