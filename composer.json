@@ -1,5 +1,5 @@
 {
-    "name": "wilbis/authcli-jwt",
+    "name": "wilbispaulo/authcli-jwt",
     "description": "Client for API JWT authorization.",
     "type": "library",
     "license": "MIT",
