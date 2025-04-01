@@ -1,9 +1,10 @@
 <?php
 
-namespace Wilbis\AuthCliJWT;
+namespace AuthCliJWT;
 
 use Exception;
-use Wilbis\AuthCliJWT\StandardClock;
+use AuthCliJWT\StandardClock;
+use AuthCliJwt\ScopeChecker;
 use Jose\Component\Checker\AudienceChecker;
 use Jose\Component\Signature\JWS;
 use Jose\Component\Checker\IssuerChecker;
@@ -18,7 +19,6 @@ use Jose\Component\Checker\ExpirationTimeChecker;
 use Jose\Component\Checker\InvalidClaimException;
 use Jose\Component\Signature\Serializer\CompactSerializer;
 use Jose\Component\Signature\Serializer\JWSSerializerManager;
-use Wilbis\AuthCliJwt\ScopeChecker;
 
 class OAuthCli
 {

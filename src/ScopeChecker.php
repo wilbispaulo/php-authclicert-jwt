@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wilbis\AuthCliJwt;
+namespace AuthCliJwt;
 
 use Jose\Component\Checker\ClaimChecker;
 use Jose\Component\Checker\InvalidClaimException;
