@@ -31,7 +31,7 @@ class OAuthCli
         private string $issuer,
         private string $audience
     ) {
-        if (count($cer = glob($pathToCert)) > 0) {
+        if (count($cer = glob($this->pathToCert)) > 0) {
             $this->publicKey = JWKFactory::createFromCertificateFile($cer[0]);
             $this->setPublicCER($cer[0]);
         };
