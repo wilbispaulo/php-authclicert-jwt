@@ -1,9 +1,9 @@
 <?php
 
-namespace AuthCliJWT;
+namespace AuthCliJwt;
 
 use Exception;
-use AuthCliJWT\StandardClock;
+use AuthCliJwt\StandardClock;
 use AuthCliJwt\ScopeChecker;
 use Jose\Component\Checker\AudienceChecker;
 use Jose\Component\Signature\JWS;
