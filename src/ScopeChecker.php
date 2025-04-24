@@ -25,8 +25,10 @@ final class ScopeChecker implements ClaimChecker
         }
 
         $t = false;
-        foreach ($value as $key => $val) {
-            $t |= ($this->endpoint === ($key . '/' . $val));
+        foreach ($value as $val) {
+            if ($this->evaluateClaim($val, $this->endpoint)) {
+                $t = true;
+            };
         }
 
         if (!$t) {
@@ -37,5 +39,22 @@ final class ScopeChecker implements ClaimChecker
     public function supportedClaim(): string
     {
         return ScopeChecker::CLAIM_NAME;
+    }
+
+    private function evaluateClaim(string $claim1, $claim2): bool
+    {
+        $arr1 = explode('/', $claim1);
+        $arr2 = explode('/', $claim2);
+        if (count($arr1) !== count($arr2)) {
+            return false;
+        }
+        $i = 0;
+        foreach ($arr1 as $item) {
+            if ($item !== $arr2[$i] && $item !== '#') {
+                return false;
+            }
+            $i++;
+        }
+        return true;
     }
 }
